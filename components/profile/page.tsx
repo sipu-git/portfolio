@@ -4,15 +4,13 @@ import { FaInstagram } from "react-icons/fa6";
 import { LuFacebook } from "react-icons/lu";
 import { IoLogoGithub } from "react-icons/io5";
 import Link from "next/link";
-import MovingButton from "../ui/MovingButton";
+import MovingButton from "../ui/buttons/MovingButton";
 import { ColorPicker } from "../../styles/color";
-import AOSWrapper from "../ui/FadeUp";
-import FlipIconButton from "../ui/FlipedButton";
+import FlipIconButton from "../ui/buttons/FlipedButton";
 
 export default function Profile() {
   return (
     <>
-      <AOSWrapper duration={1200} easing="ease-out" once={true}>
         <div
           style={{ backgroundColor: ColorPicker.bg }}
           data-aos="fade-up"
@@ -65,7 +63,6 @@ export default function Profile() {
             </Link>
           </div>
         </div>
-      </AOSWrapper>
     </>
   );
 }

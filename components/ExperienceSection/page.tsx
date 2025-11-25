@@ -1,11 +1,12 @@
 "use client";
 
-import { IoBriefcaseOutline } from "react-icons/io5";
+// import { IoBriefcaseOutline } from "react-icons/io5";
 import Heading1 from "../Headings/Heading1";
 import Heading2 from "../Headings/Heading2";
 import { ColorPicker } from "../../styles/color";
 import { motion, Variants } from "framer-motion";
 import AOSWrapper from "../ui/FadeUp";
+import { BriefcaseBusiness } from "lucide-react";
 
 export default function ExperienceSection() {
     const testimonials = [
@@ -45,8 +46,8 @@ export default function ExperienceSection() {
     };
 
     return (
-        <div className="min-h-[60vh] flex flex-col gap-6 py-12">
-            <AOSWrapper duration={1200} easing="ease-out" once={true}><div data-aos="zoom-in" className=""><Heading1 text="Experience" icon={IoBriefcaseOutline} className="text-4xl" /></div></AOSWrapper>
+        <div className="h-auto flex flex-col gap-6 py-8">
+           <div className=""><Heading1 text="Experience" icon={BriefcaseBusiness} className="text-4xl" /></div>
             <motion.div
                 variants={containerVariants}
                 initial="hidden"

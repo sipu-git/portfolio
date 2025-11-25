@@ -5,6 +5,7 @@ import { ColorPicker } from "@/styles/color";
 import Heading1 from "../Headings/Heading1";
 import TextReveal from "../ui/TextReval";
 import AOSWrapper from "../ui/FadeUp";
+import Heading2 from "../Headings/Heading2";
 
 export default function HeroSection() {
   const achievement = [
@@ -15,7 +16,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center min-h-[80vh] px-3 sm:px-6 md:px-8">
+    <div className="w-full flex flex-col justify-center h-auto mt-12">
       <div className="flex flex-col gap-5">
         {/* === Greeting Text === */}
         <TextReveal
@@ -45,7 +46,7 @@ export default function HeroSection() {
         {/* === Location Heading === */}
         <AOSWrapper duration={1200} easing="ease-out" once={true}>
           <div data-aos="fade-up">
-            <Heading1
+            <Heading2
               text="Based in Bhubaneswar, Odisha"
               className="text-2xl sm:text-3xl md:text-4xl mt-2"
             />
@@ -97,11 +98,11 @@ export default function HeroSection() {
                   duration-300
                 "
               >
-                <Heading1
+                <Heading2
                   text={items.numbers}
                   className="text-2xl sm:text-3xl md:text-4xl font-bold"
                 />
-                <Heading1
+                <Heading2
                   text={items.title}
                   className="text-xs sm:text-sm md:text-base text-center text-gray-300 mt-1"
                 />

@@ -1,33 +1,81 @@
 'use client';
 
-import AnimatedCard from "@/components/ui/AnimatedCards";
 import Heading1 from "../Headings/Heading1";
 import { FolderGit2 } from "lucide-react";
+import { useRef } from "react";
+import { useScroll } from "framer-motion";
+import Card from "../ui/StickyCardScroll";
+import ReactLenis from "lenis/react";
 
 const cardData = [
-  { id: 1, image: "/netflix-app.jpg", title: "Netflix Clone", desc: "Full Stack Web Application", link: "https://netflix-frontend-jade.vercel.app/" },
-  { id: 2, image: "/flipkart.jpg", title: "E-Commerce", desc: "Full Stack Web Application", link: "#" },
-  { id: 3, image: "/todo-list.jpg", title: "TODO List", desc: "Full Stack TODO List Application", link: "#" },
-  { id: 4, image: "/CRUD.jpg", title: "CRUD Application", desc: "Full Stack Web Application", link: "#" },
+  { id: 1, title: "Netflix Clone", description: "Full Stack Web Application", url: "/netflix-app.jpg", link: "#" },
+  { id: 2, title: "E-Commerce", description: "Full Stack Web Application", url: "/flipkart.jpg", link: "#" },
+  { id: 3, title: "TODO List", description: "Full Stack TODO List Application", url: "/todo-list.jpg", link: "#" },
+  { id: 4, title: "CRUD App", description: "Full Stack Web Application", url: "/CRUD.jpg", link: "#" },
 ];
 
+// Split into two columns
+const leftColumn = cardData.filter((_, index) => index % 2 === 0);
+const rightColumn = cardData.filter((_, index) => index % 2 !== 0);
+
 export default function Projects() {
+  const containerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
   return (
-    <section className="w-full py-4 -px-10">
-      <div className="py-4">
-              <Heading1 icon={FolderGit2} text="My Projects" className="text-4xl"  />
-      </div>
-      <div className="w-full max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
-        {cardData.map((item) => (
-          <AnimatedCard
-            key={item.id}
-            image={item.image}
-            title={item.title}
-            desc={item.desc}
-            link={item.link}
-          />
-        ))}
-      </div>
-    </section>
+    <ReactLenis root>
+      <section ref={containerRef} className="w-full">
+        <div className="mb-6">
+          <Heading1 icon={FolderGit2} text="My Projects" className="text-4xl" />
+        </div>
+
+        {/* Two-column sticky layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col gap-8">
+            {leftColumn.map((card, index) => {
+              const targetScale = 1 - (leftColumn.length - index) * 0.05;
+              return (
+                <Card
+                  key={card.id}
+                  i={index}
+                  url={card.url}
+                  title={card.title}
+                  description={card.description}
+                  progress={scrollYProgress}
+                  range={[index * 0.25, 1]}
+                  targetScale={targetScale}
+                />
+              );
+            })}
+          </div>
+
+          {/* RIGHT COLUMN */}
+          <div className="flex flex-col gap-8">
+            {rightColumn.map((card, index) => {
+              const targetScale = 1 - (rightColumn.length - index) * 0.05;
+              return (
+                <Card
+                  key={card.id}
+                  i={card.id}
+                  url={card.url}
+                  title={card.title}
+                  description={card.description}
+                  progress={scrollYProgress}
+                  range={[index * 0.25, 1]}
+                  targetScale={targetScale}
+                />
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+    </ReactLenis>
   );
 }

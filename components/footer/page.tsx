@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { LuFacebook } from "react-icons/lu";
 import { IoLogoGithub } from "react-icons/io5";
 import Link from "next/link";
-import FlipIconButton from "../ui/FlipedButton";
+import FlipIconButton from "../ui/buttons/FlipedButton";
 
 export default function Footer() {
     return (

@@ -8,7 +8,7 @@ import Footer from "@/components/footer/page";
 import HeroSection from "@/components/HeroSection/page";
 import Projects from "@/components/MyProjects/page";
 import Profile from "@/components/profile/page";
-import InfiniteCards from "@/components/SkillSection/page";
+import SkillSection from "@/components/SkillSection/page";
 import GreenGlowLine from "@/components/ui/GlowingLine";
 
 export default function HomePage() {
@@ -40,7 +40,7 @@ export default function HomePage() {
             <ExperienceSection />
             <Projects />
             <EducationSection />
-            <InfiniteCards />
+            <SkillSection/>
             <ContactSection />
           </div>
         </div>
