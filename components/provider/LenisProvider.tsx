@@ -10,7 +10,7 @@ interface LenisProviderProps {
 
 export default function LenisProvider({
   children,
-  duration = 3.5,
+  duration = 2.5,
 }: LenisProviderProps) {
   const lenisRef = useRef<Lenis | null>(null);
   const rafRef = useRef<number | null>(null);

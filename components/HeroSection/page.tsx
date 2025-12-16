@@ -35,6 +35,7 @@ export default function HeroSection() {
             "Software Developer",
             "Full Stack Developer",
             "Frontend Developer",
+            "Backend Developer",
           ]}
           typingSpeed={80}
           deletingSpeed={50}

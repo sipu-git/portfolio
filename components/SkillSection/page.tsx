@@ -53,7 +53,6 @@ export default function SkillSection() {
   const javaRef = useRef<HTMLDivElement>(null);
   const mysqlRef = useRef<HTMLDivElement>(null);
 
-  // ⭐ CENTER ICON REF
   const centerRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -81,7 +80,7 @@ export default function SkillSection() {
         </div>
 
         <div className="flex justify-between">
-          <Circle ref={mongoRef} src="/coding-logos/mongodb.png" alt="MongoDB" />
+          <Circle ref={mongoRef} src="/coding-logos/mongdb.png" alt="mongodb" />
           <Circle ref={javascriptRef} src="/coding-logos/javascript.png" alt="JavaScript" />
         </div>
 

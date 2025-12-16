@@ -16,10 +16,8 @@ const ButtonCrossArrow: React.FC<CrossArrowProps> = ({ text, icon: Icon }) => {
         from-[#f7f8ff] to-[#ffffff] font-medium 
         dark:text-neutral-200 text-black cursor-pointer">
 
-      {/* Text */}
       <span className="pl-4">{text}</span>
 
-      {/* ICON + ARROWS */}
       <div className="relative h-9 w-9 overflow-hidden dark:bg-white bg-black rounded-full mr-1">
         <div className="absolute top-[0.7em] left-[-0.1em] 
             grid place-content-center transition-all w-full h-full 

@@ -11,16 +11,16 @@ import { BriefcaseBusiness } from "lucide-react";
 export default function ExperienceSection() {
     const testimonials = [
         {
-            role: "Software Development Engineer Intern",
-            duration: "July 2025 - Present",
+            role: "Software Developer",
+            duration: "Oct 2025 - Present",
             company: "Sparkradix Technology Pvt. Ltd",
-            desc: "As a Software Development Engineer Intern, I focus on designing and developing end-to-end web applications using the MERN stack. I work on building secure APIs, implementing dynamic user interfaces with React, managing databases with MongoDB, and deploying full-stack solutions. I collaborate with the team to solve real-world business challenges through efficient code and modern development practices."
+            desc: "After successfully completing a three-month SDE Internship at Sparkradix Technologies, I transitioned into a full-time Software Developer role. During my internship, I significantly upgraded my technical skills, contributed to real-time development projects, and demonstrated strong problem-solving abilities, which led to my full-time selection."
         },
         {
-            role: "Full Stack Developer Intern",
-            duration: "Sept 2024 - Apr 2025",
-            company: "Tetratrion Technology Pvt. Ltd",
-            desc: "My role involved developing scalable backend APIs, integrating secure authentication systems, designing responsive front-end interfaces, and collaborating with cross-functional teams to deliver end-to-end solutions that enhanced user experience and performance."
+            role: "SDE Intern",
+            duration: "July 2025 - Oct 2025",
+            company: "Sparkradix Technology Pvt. Ltd",
+            desc: "As a Software Development Engineer Intern, I focus on designing and developing end-to-end web applications using the MERN stack. I worked on building secure APIs, implementing dynamic user interfaces with React, managing databases with MongoDB, and deploying full-stack solutions. I collaborate with the team to solve real-world business challenges through efficient code and modern development practices."
         },
     ];
 
