@@ -24,7 +24,7 @@ export default function Footer() {
             <Link href="https://www.facebook.com/profile.php?id=100075259404065" className="p-2 border border-[#3e3e3e] rounded-lg hover:bg-[#3e3e3e]/50 transition">
               <FlipIconButton frontIcon={<LuFacebook size={20} />} backIcon={<LuFacebook size={20} />} />
             </Link>
-            <Link href="https://github.com/Sipu-982?tab=repositories" className="p-2 border border-[#3e3e3e] rounded-lg hover:bg-[#3e3e3e]/50 transition">
+            <Link href="https://github.com/sipu-git" className="p-2 border border-[#3e3e3e] rounded-lg hover:bg-[#3e3e3e]/50 transition">
               <FlipIconButton frontIcon={<IoLogoGithub size={20} />} backIcon={<IoLogoGithub size={20} />} />
             </Link>
                  </div>
