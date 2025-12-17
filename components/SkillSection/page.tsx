@@ -86,7 +86,7 @@ export default function SkillSection() {
 
         <div className="flex justify-between">
           <Circle ref={typescriptRef} src="/coding-logos/typescript.png" alt="TypeScript" />
-          <Circle ref={cRef} src="/coding-logos/c.png" alt="c" />
+          <Circle ref={cRef} src="/coding-logos/C.png" alt="clang" />
         </div>
 
         <div className="flex justify-between">
