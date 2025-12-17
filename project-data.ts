@@ -54,7 +54,7 @@ export const ProjectData = [
         slug: "aws-rds-node-backend",
         title: "AWS RDS Integated Nodejs Application",
         shortDesc: "Node.js Backend with AWS RDS & REST APIs",
-        image: "/todo-list.jpg",
+        image: "/aws.jpg",
         techStack: [
             "Node.js",
             "Express.js",
